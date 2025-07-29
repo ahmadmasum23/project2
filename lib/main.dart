@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_samples/ui/home.dart';
+import 'package:flutter_samples/ui/getstart.dart';
+//import 'package:flutter_samples/ui/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:RiveAppHome(),
+      home:GetStart(),
     );
-  }//Your project contains issues that can be fixed automatically.
+  }
 }
