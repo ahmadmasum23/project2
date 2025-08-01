@@ -13,7 +13,18 @@ import 'package:flutter_samples/ui/screen/searc.dart';
 
 Widget commonTabScene(Widget content) {
   return Container(
-    color: RiveAppTheme.background,
+    decoration: BoxDecoration(
+      gradient: const LinearGradient(
+        colors: [
+          Color(0xFFAEC8FF), // Top color
+          Color(0xFFFFFFFF), // Bottom color
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      ),
+      borderRadius: BorderRadius.circular(30),
+    ),
+    //color: RiveAppTheme.background,
     alignment: Alignment.center,
     child: content,
   );
@@ -46,13 +57,13 @@ class _RiveAppHomeState extends State<RiveAppHome>
 
   late SMIBool _menuBtn;
 
-  bool _showOnBoarding = false;
+  final bool _showOnBoarding = false;
   Widget _tabBody = Container(color: RiveAppTheme.background);
   final List<Widget> _screens = [
     const HomeTabView(),
     commonTabScene(const HalloPage()),
-    commonTabScene(const Text("Timer")),
-    commonTabScene(const Text("Bell")),
+    commonTabScene(const Text("No histrory yet")),
+    commonTabScene(const Text("No notifications yet")),
     commonTabScene(const AcountPage()),
   ];
   final springDesc = const SpringDescription(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_samples/ui/theme.dart'; // buat warna RiveAppTheme misalnya
+import 'package:flutter_samples/ui/theme.dart';
 
 class AcountPage extends StatelessWidget {
   const AcountPage({super.key});
@@ -12,61 +12,37 @@ class AcountPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              // Row(
-              //   children: [
-              //     const Text(
-              //       'SkillUp',
-              //       style: TextStyle(
-              //         fontFamily: "Poppins",
-              //         fontWeight: FontWeight.bold,
-              //         fontSize: 20,
-              //       ),
-              //     ),
-              //     const SizedBox(width: 8),
-              //     Image.asset(
-              //       app_assets.topi, // ganti dengan path topi ungu
-              //       width: 30,
-              //     )
-              //   ],
-              // ),
-            ],
-          ),
           const SizedBox(height: 50),
           const Text(
-            'Acount',
-            style: TextStyle(fontSize: 34, fontFamily: "Poppins"),
-          ),
-          
-            const SizedBox(height: 16),
-            Center(
-            child: Icon(Icons.account_circle, size: 100, color: Colors.black),
+            'Account',
+            style: TextStyle(
+              fontSize: 32,
+              fontFamily: "Poppins",
+              fontWeight: FontWeight.bold,
             ),
-
+          ),
+          const SizedBox(height: 16),
+          const Center(
+            child: Icon(Icons.account_circle, size: 100, color: Colors.black),
+          ),
           const SizedBox(height: 50),
           Expanded(
             child: ListView(
               children: [
-                _buildBabTile("General", Icons.settings, Icons.arrow_forward_ios),
-                _buildBabTile("Security", Icons.security, Icons.arrow_forward_ios),
-                _buildBabTile("Payment", Icons.payment, Icons.arrow_forward_ios),
-                _buildBabTile("Contact Us", Icons.contact_support, Icons.arrow_forward_ios),
-                _buildBabTile("Log out", Icons.logout, Icons.arrow_forward_ios),
+                _buildTile("General", Icons.settings),
+                _buildTile("Security", Icons.security),
+                _buildTile("Payment", Icons.payment),
+                _buildTile("Contact Us", Icons.contact_support),
+                _buildTile("Log out", Icons.logout),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildBabTile(
-    String desc,
-    IconData leadingIcon,
-    IconData? trailingIcon, 
-  ) {
+  static Widget _buildTile(String title, IconData leadingIcon) {
     return Container(
       margin: const EdgeInsets.only(bottom: 15),
       decoration: BoxDecoration(
@@ -79,30 +55,20 @@ class AcountPage extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
       child: Row(
         children: [
-          // Ikon kiri (kalau ada)
           Icon(leadingIcon, size: 26, color: Colors.black),
           const SizedBox(width: 16),
-
-          // Teks tengah
           Expanded(
             child: Text(
-              desc,
+              title,
               style: const TextStyle(
                 fontFamily: "Poppins",
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
+                fontSize: 25,
+                fontWeight: FontWeight.w500,
                 color: Colors.black,
               ),
             ),
           ),
-
-          // Ikon kanan (jika ada)
-          if (trailingIcon != null)
-            Icon(
-              trailingIcon,
-              size: 20,
-              color: Colors.black.withOpacity(0.8),
-            ),
+          const Icon(Icons.arrow_forward_ios, size: 20, color: Colors.black54),
         ],
       ),
     );
