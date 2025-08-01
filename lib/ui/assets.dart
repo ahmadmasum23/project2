@@ -1,5 +1,6 @@
 const String topic_1 = 'assets/samples/images/topic_1.png';
 const String topic_2 = 'assets/samples/images/topic_2.png';
+const String topi = 'assets/samples/images/topi.png';
 // const String spline = 'assets/samples/rive_app/images/backgrounds/spline.png';
 //const String logoEmail = 'assets/samples/ui/rive_app/images/logo_email.png';
 //const String logoApple = 'assets/samples/ui/rive_app/images/logo_apple.png';
