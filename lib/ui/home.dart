@@ -30,14 +30,14 @@ Widget commonTabScene(Widget content) {
   );
 }
 
-// Widget commonTabScene(String tabName) {
-//   return Container(
-//       color: RiveAppTheme.background,
-//       alignment: Alignment.center,
-//       child: Text(tabName,
-//           style: const TextStyle(
-//               fontSize: 28, fontFamily: "Poppins", color: Colors.black)));
-// }
+  // Widget commonTabScene(String tabName) {
+  //   return Container(
+  //       color: RiveAppTheme.background,
+  //       alignment: Alignment.center,
+  //       child: Text(tabName,
+  //           style: const TextStyle(
+  //               fontSize: 28, fontFamily: "Poppins", color: Colors.black)));
+  // }
 
 class RiveAppHome extends StatefulWidget {
   const RiveAppHome({super.key});
