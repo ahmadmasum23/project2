@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_samples/ui/screen/acount.dart';
 import 'package:rive/rive.dart' hide LinearGradient;
 import 'dart:math' as math;
 import 'package:flutter_samples/ui/navigation/custom_tab_bar.dart';
@@ -52,7 +53,7 @@ class _RiveAppHomeState extends State<RiveAppHome>
     commonTabScene(const HalloPage()),
     commonTabScene(const Text("Timer")),
     commonTabScene(const Text("Bell")),
-    commonTabScene(const Text("User")),
+    commonTabScene(const AcountPage()),
   ];
   final springDesc = const SpringDescription(
     mass: 0.1,
