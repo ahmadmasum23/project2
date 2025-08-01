@@ -10,8 +10,6 @@ import 'package:flutter_samples/ui/theme.dart';
 import 'package:flutter_samples/ui/assets.dart' as app_assets;
 import 'package:flutter_samples/ui/screen/searc.dart';
 
-// Common Tab Scene for the tabs other than 1st one, showing only tab name in center
-// Fungsi commonTabScene diubah untuk menerima Widget
 Widget commonTabScene(Widget content) {
   return Container(
     color: RiveAppTheme.background,
@@ -38,8 +36,6 @@ class RiveAppHome extends StatefulWidget {
   State<RiveAppHome> createState() => _RiveAppHomeState();
 }
 
-
-
 class _RiveAppHomeState extends State<RiveAppHome>
     with TickerProviderStateMixin {
   late AnimationController? _animationController;
@@ -53,10 +49,8 @@ class _RiveAppHomeState extends State<RiveAppHome>
   Widget _tabBody = Container(color: RiveAppTheme.background);
   final List<Widget> _screens = [
     const HomeTabView(),
-    commonTabScene(const HalloPage()), // Kirim widget HalloPage
-    commonTabScene(
-      const Text("Timer"),
-    ), // Untuk tab lain, bungkus teks dalam widget Text
+    commonTabScene(const HalloPage()),
+    commonTabScene(const Text("Timer")),
     commonTabScene(const Text("Bell")),
     commonTabScene(const Text("User")),
   ];
