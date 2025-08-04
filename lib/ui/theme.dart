@@ -7,5 +7,4 @@ class RiveAppTheme {
   static const Color background2 = Color(0xFF17203A);
   // static const Color shadowDark = Color(0xFF000000);
   // static const Color backgroundDark = Color(0xFF25254B);
- 
 }

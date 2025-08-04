@@ -2,42 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_samples/ui/screen/acount.dart';
-import 'package:rive/rive.dart' hide LinearGradient;
+import 'package:flutter_samples/ui/screen/history.dart';
+import 'package:flutter_samples/ui/screen/notification.dart';
+import 'package:rive/rive.dart' hide LinearGradient, Image;
 import 'dart:math' as math;
 import 'package:flutter_samples/ui/navigation/custom_tab_bar.dart';
 import 'package:flutter_samples/ui/navigation/home_tab_view.dart';
 import 'package:flutter_samples/ui/navigation/side_menu.dart';
 import 'package:flutter_samples/ui/theme.dart';
 import 'package:flutter_samples/ui/assets.dart' as app_assets;
-import 'package:flutter_samples/ui/screen/searc.dart';
+import 'package:flutter_samples/ui/screen/search.dart';
 
 Widget commonTabScene(Widget content) {
   return Container(
     decoration: BoxDecoration(
-      gradient: const LinearGradient(
-        colors: [
-          Color(0xFFAEC8FF), // Top color
-          Color(0xFFFFFFFF), // Bottom color
-        ],
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-      ),
-      borderRadius: BorderRadius.circular(30),
+      color: RiveAppTheme.background,
     ),
-    //color: RiveAppTheme.background,
     alignment: Alignment.center,
     child: content,
   );
 }
-
-  // Widget commonTabScene(String tabName) {
-  //   return Container(
-  //       color: RiveAppTheme.background,
-  //       alignment: Alignment.center,
-  //       child: Text(tabName,
-  //           style: const TextStyle(
-  //               fontSize: 28, fontFamily: "Poppins", color: Colors.black)));
-  // }
 
 class RiveAppHome extends StatefulWidget {
   const RiveAppHome({super.key});
@@ -61,9 +45,9 @@ class _RiveAppHomeState extends State<RiveAppHome>
   Widget _tabBody = Container(color: RiveAppTheme.background);
   final List<Widget> _screens = [
     const HomeTabView(),
-    commonTabScene(const HalloPage()),
-    commonTabScene(const Text("No histrory yet")),
-    commonTabScene(const Text("No notifications yet")),
+    commonTabScene(const SearchPage()),
+    commonTabScene(const HistoryPage()),
+    commonTabScene(const NotificationPage()),
     commonTabScene(const AcountPage()),
   ];
   final springDesc = const SpringDescription(
@@ -195,28 +179,15 @@ class _RiveAppHomeState extends State<RiveAppHome>
               );
             },
             child: GestureDetector(
-              child: MouseRegion(
-                cursor: SystemMouseCursors.click,
-                child: Container(
-                  width: 36,
-                  height: 36,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(18),
-                    boxShadow: [
-                      BoxShadow(
-                        color: RiveAppTheme.shadow.withOpacity(0.2),
-                        blurRadius: 5,
-                        offset: const Offset(0, 5),
-                      ),
-                    ],
-                  ),
-                  child: const Icon(Icons.person_outline),
+              child: Container(
+               
+                alignment: Alignment.center,
+                child: Image.asset(
+                  'assets/samples/images/topi.png',
+                  width: 40,
+                  height: 50,
                 ),
               ),
-              onTap: () {
-                // _presentOnBoarding(true);
-              },
             ),
           ),
           RepaintBoundary(
@@ -226,9 +197,6 @@ class _RiveAppHomeState extends State<RiveAppHome>
                 return SafeArea(
                   child: Row(
                     children: [
-                      // There's an issue/behaviour in flutter where translating the GestureDetector or any button
-                      // doesn't translate the touch area, making the Widget unclickable, so instead setting a SizedBox
-                      // in a Row to have a similar effect
                       SizedBox(width: _sidebarAnim.value * 216),
                       child!,
                     ],
@@ -301,16 +269,10 @@ class _RiveAppHomeState extends State<RiveAppHome>
                         ),
                       ],
                     ),
-                    // child: OnBoardingView(
-                    //   closeModal: () {
-                    //     _presentOnBoarding(false);
-                    //   },
-                    // ),
                   ),
                 ),
               ),
             ),
-          // White underlay behind the bottom tab bar
           IgnorePointer(
             ignoring: true,
             child: Align(
@@ -342,7 +304,6 @@ class _RiveAppHomeState extends State<RiveAppHome>
           ),
         ],
       ),
-      //bottomnavigatornya
       bottomNavigationBar: RepaintBoundary(
         child: AnimatedBuilder(
           animation: !_showOnBoarding ? _sidebarAnim : _onBoardingAnim,

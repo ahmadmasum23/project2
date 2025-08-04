@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/ui/theme.dart';
 
-class HalloPage extends StatelessWidget {
-  const HalloPage({super.key});
+class SearchPage extends StatelessWidget {
+  const SearchPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,14 +11,7 @@ class HalloPage extends StatelessWidget {
       child: Center(
         child: Container(
           decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [
-                Color(0xFFAEC8FF), // Top color
-                Color(0xFFFFFFFF), // Bottom color
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
+            color: RiveAppTheme.background,
             borderRadius: BorderRadius.circular(30),
           ),
           clipBehavior: Clip.hardEdge,
@@ -27,7 +20,7 @@ class HalloPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 100),
+                const SizedBox(height: 50),
                 const Text(
                   'Search',
                   style: TextStyle(
@@ -35,6 +28,7 @@ class HalloPage extends StatelessWidget {
                     fontFamily: "Poppins",
                   ),
                 ),
+                const SizedBox(height: 20),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   height: 50,
@@ -63,7 +57,7 @@ class HalloPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 5),
+                const SizedBox(height: 10),
                 Expanded(
                   child: ListView(
                     children: [

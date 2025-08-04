@@ -55,7 +55,7 @@ class _GetStartState extends State<GetStart> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RiveAppHome()), // Replace SecondPage with your target page
+                    MaterialPageRoute(builder: (context) => RiveAppHome()),
                   );
                 },
                 child: Container(

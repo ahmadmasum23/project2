@@ -7,37 +7,63 @@ class AcountPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: RiveAppTheme.background,
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(height: 50),
-          const Text(
-            'Account',
-            style: TextStyle(
-              fontSize: 32,
-              fontFamily: "Poppins",
-              fontWeight: FontWeight.bold,
-            ),
+      color: RiveAppTheme.background2,
+      child: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            color: RiveAppTheme.background,
+            borderRadius: BorderRadius.circular(30),
           ),
-          const SizedBox(height: 16),
-          const Center(
-            child: Icon(Icons.account_circle, size: 100, color: Colors.black),
-          ),
-          const SizedBox(height: 50),
-          Expanded(
-            child: ListView(
+          clipBehavior: Clip.hardEdge,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _buildTile("General", Icons.settings),
-                _buildTile("Security", Icons.security),
-                _buildTile("Payment", Icons.payment),
-                _buildTile("Contact Us", Icons.contact_support),
-                _buildTile("Log out", Icons.logout),
+                const SizedBox(height: 50),
+                const Text(
+                  'Acount',
+                  style: TextStyle(
+                    fontSize: 34,
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                const Center(
+                  child: Icon(
+                    Icons.account_circle,
+                    size: 100,
+                    color: Colors.black,
+                  ),
+                ),
+                Center(
+                  child: Text(
+                    'XII RPL 1',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 25, 
+                      fontFamily: "Inter",
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Expanded(
+                  child: ListView(
+                    children: [
+                      _buildTile("General", Icons.settings),
+                      _buildTile("Security", Icons.security),
+                      _buildTile("Payment", Icons.payment),
+                      _buildTile("Contact Us", Icons.contact_support),
+                      _buildTile("Log out", Icons.logout),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
-        ],
+        ),
       ),
     );
   }
@@ -61,9 +87,9 @@ class AcountPage extends StatelessWidget {
             child: Text(
               title,
               style: const TextStyle(
-                fontFamily: "Poppins",
+                fontFamily: "Inter",
                 fontSize: 25,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.bold,
                 color: Colors.black,
               ),
             ),
