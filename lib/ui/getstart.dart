@@ -1,7 +1,6 @@
 // Mengimpor package material dari Flutter untuk widget Material Design
 import 'package:flutter/material.dart';
-// Mengimpor widget RiveAppHome dari file home.dart
-import 'package:flutter_samples/ui/home.dart';
+import 'package:flutter_samples/ui/screen/login.dart';
 
 // Widget utama untuk halaman awal aplikasi (Get Started)
 class GetStart extends StatefulWidget {
@@ -68,7 +67,7 @@ class _GetStartState extends State<GetStart> {
                   // Navigasi ke halaman RiveAppHome saat tombol diklik
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RiveAppHome()),
+                    MaterialPageRoute(builder: (context) => LoginPage()),
                   );
                 },
                 child: Container(

@@ -46,7 +46,7 @@ class MenuItemModel {
     MenuItemModel(
       title: "History",
       riveIcon: TabItem(stateMachine: "TIMER_Interactivity", artboard: "TIMER"), // Menu untuk riwayat
-    ),
+    ), 
     MenuItemModel(
       title: "Notification",
       riveIcon: TabItem(stateMachine: "BELL_Interactivity", artboard: "BELL"), // Menu untuk notifikasi

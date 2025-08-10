@@ -8,7 +8,7 @@ const String topi = 'assets/samples/images/topi.png';
 
 // Rive assets
 const String iconsRiv = 'assets/samples/rive/icons.riv';
-const String confettiRiv = 'assets/samples/rive/confetti.riv';
+// const String confettiRiv = 'assets/samples/rive/confetti.riv';
 const String menuButtonRiv = 'assets/samples/rive/menu_button.riv';
 // const String shapesRiv = 'assets/samples/rive/shapes.riv';
 // const String buttonRiv = 'assets/samples/rive/button.riv';
