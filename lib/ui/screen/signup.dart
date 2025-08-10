@@ -1,7 +1,8 @@
 // Mengimpor package material dari Flutter untuk widget Material Design
 import 'package:flutter/material.dart';
-// Mengimpor widget LoginPage dari file home.dart
-import 'package:flutter_samples/ui/screen/login.dart';
+import 'package:flutter_samples/ui/home.dart';
+// Mengimpor widget RiveAppHome dari file home.dart
+
 
 // Widget utama untuk halaman awal aplikasi (Get Started)
 class SignUpPage extends StatefulWidget {
@@ -119,10 +120,10 @@ class _SignUpPageState extends State<SignUpPage> {
               // Tombol untuk memulai aplikasi
               GestureDetector(
                 onTap: () {
-                  // Navigasi ke halaman LoginPage saat tombol diklik
+                  // Navigasi ke halaman RiveAppHome saat tombol diklik
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    MaterialPageRoute(builder: (context) => RiveAppHome()),
                   );
                 },
                 child: Container(
