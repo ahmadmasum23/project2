@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_samples/ui/home.dart';
 // Mengimpor widget RiveAppHome dari file home.dart
 
-
 // Widget utama untuk halaman awal aplikasi (Get Started)
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -44,7 +43,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 child: Image.asset(
                   'assets/samples/images/topi.png',
                 ), // Gambar logo topi
-              ),  
+              ),
               // Teks judul aplikasi
               const Text(
                 'SkillUp!',
@@ -58,63 +57,63 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const SizedBox(height: 20), // Jarak antar elemen
               Padding(
-  padding: const EdgeInsets.symmetric(horizontal: 40),
-  child: Column(
-    children: [
-      TextField(
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: const Color(0xFFD3D3D3),
-          hintText: 'Username',
-          hintStyle: const TextStyle(color: Colors.black54),
-          contentPadding: const EdgeInsets.symmetric(
-            vertical: 23,// Tinggi lebih besar di sini
-            horizontal: 16,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide.none,
-          ),
-        ),
-      ),
-      const SizedBox(height: 10),
-      TextField(
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: const Color(0xFFD3D3D3),
-          hintText: 'Gmail',
-          hintStyle: const TextStyle(color: Colors.black54),
-          contentPadding: const EdgeInsets.symmetric(
-            vertical: 23,
-            horizontal: 16,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide.none,
-          ),
-        ),
-      ),
-      const SizedBox(height: 10),
-      TextField(
-        obscureText: true,
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: const Color(0xFFD3D3D3),
-          hintText: 'Password',
-          hintStyle: const TextStyle(color: Colors.black54),
-          contentPadding: const EdgeInsets.symmetric(
-            vertical: 23,
-            horizontal: 16,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide.none,
-          ),
-        ),
-      ),
-    ],
-  ),
-),
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: Column(
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: const Color(0xFFD3D3D3),
+                        hintText: 'Username',
+                        hintStyle: const TextStyle(color: Colors.black54),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 23, // Tinggi lebih besar di sini
+                          horizontal: 16,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide.none,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: const Color(0xFFD3D3D3),
+                        hintText: 'Gmail',
+                        hintStyle: const TextStyle(color: Colors.black54),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 23,
+                          horizontal: 16,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide.none,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: const Color(0xFFD3D3D3),
+                        hintText: 'Password',
+                        hintStyle: const TextStyle(color: Colors.black54),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 23,
+                          horizontal: 16,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide.none,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               const SizedBox(height: 20),
               // Tombol untuk memulai aplikasi

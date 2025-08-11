@@ -31,10 +31,14 @@ class MenuItemModel {
           TabItem(stateMachine: "SEARCH_Interactivity", artboard: "SEARCH"), // Menu untuk pencarian
     ),
     MenuItemModel(
-      title: "Favorites ",
+      title: "Add Courses ",
       riveIcon:
           TabItem(stateMachine: "STAR_Interactivity", artboard: "LIKE/STAR"), // Menu untuk favorit
     ),
+    MenuItemModel(
+      title: "Account",
+      riveIcon: TabItem(stateMachine: "USER_Interactivity", artboard: "USER"), // Menu untuk riwayat
+    ), 
     MenuItemModel(
       title: "Help",
       riveIcon: TabItem(stateMachine: "CHAT_Interactivity", artboard: "CHAT"), // Menu untuk bantuan
@@ -42,14 +46,14 @@ class MenuItemModel {
   ];
 
   // Daftar item menu untuk bagian "HISTORY" di sidebar
-  static List<MenuItemModel> menuItems2 = [
-    MenuItemModel(
-      title: "History",
-      riveIcon: TabItem(stateMachine: "TIMER_Interactivity", artboard: "TIMER"), // Menu untuk riwayat
-    ), 
-    MenuItemModel(
-      title: "Notification",
-      riveIcon: TabItem(stateMachine: "BELL_Interactivity", artboard: "BELL"), // Menu untuk notifikasi
-    ),
-  ];
+  // static List<MenuItemModel> menuItems2 = [
+  //   MenuItemModel(
+  //     title: "Account",
+  //     riveIcon: TabItem(stateMachine: "USER_Interactivity", artboard: "USER"), // Menu untuk riwayat
+  //   ), 
+  //   MenuItemModel(
+  //     title: "Notification",
+  //     riveIcon: TabItem(stateMachine: "BELL_Interactivity", artboard: "BELL"), // Menu untuk notifikasi
+  //   ),
+  // ];
 }

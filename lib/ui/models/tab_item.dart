@@ -25,8 +25,7 @@ class TabItem {
   static List<TabItem> tabItemsList = [
     TabItem(stateMachine: "CHAT_Interactivity", artboard: "CHAT"), // Tab untuk fitur chat
     TabItem(stateMachine: "SEARCH_Interactivity", artboard: "SEARCH"), // Tab untuk fitur pencarian
-    TabItem(stateMachine: "TIMER_Interactivity", artboard: "TIMER"), // Tab untuk fitur timer
-    TabItem(stateMachine: "BELL_Interactivity", artboard: "BELL"), // Tab untuk fitur notifikasi
+    TabItem(stateMachine: "STAR_Interactivity", artboard: "LIKE/STAR"), // Tab untuk fitur timer 
     TabItem(stateMachine: "USER_Interactivity", artboard: "USER"), // Tab untuk fitur akun pengguna
   ];
 }

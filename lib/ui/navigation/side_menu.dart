@@ -26,7 +26,7 @@ class _SideMenuState extends State<SideMenu> {
   // Daftar item menu untuk bagian "BROWSE"
   final List<MenuItemModel> _browseMenuIcons = MenuItemModel.menuItems;
   // Daftar item menu untuk bagian "HISTORY"
-  final List<MenuItemModel> _historyMenuIcons = MenuItemModel.menuItems2;
+  // final List<MenuItemModel> _historyMenuIcons = MenuItemModel.menuItems2;
   // Menyimpan judul menu yang sedang dipilih, default ke menu pertama
   String _selectedMenu = MenuItemModel.menuItems[0].title;
   // Status tema gelap (tidak digunakan dalam build saat ini)
@@ -114,11 +114,11 @@ class _SideMenuState extends State<SideMenu> {
                       menuIcons: _browseMenuIcons,
                       onMenuPress: onMenuPress),
                   // Seksi menu "HISTORY"
-                  MenuButtonSection(
-                      title: "HISTORY",
-                      selectedMenu: _selectedMenu,
-                      menuIcons: _historyMenuIcons,
-                      onMenuPress: onMenuPress),
+                  // MenuButtonSection(
+                  //     title: "HISTORY",
+                  //     selectedMenu: _selectedMenu,
+                  //     menuIcons: _historyMenuIcons,
+                  //     onMenuPress: onMenuPress),
                 ],
               ),
             ),

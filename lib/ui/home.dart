@@ -6,8 +6,7 @@ import 'package:flutter/physics.dart';
 import 'package:flutter/services.dart';
 // Mengimpor halaman-halaman aplikasi
 import 'package:flutter_samples/ui/screen/acount.dart';
-import 'package:flutter_samples/ui/screen/history.dart';
-import 'package:flutter_samples/ui/screen/notification.dart';
+import 'package:flutter_samples/ui/screen/addcourse.dart';
 // Mengimpor package Rive untuk animasi interaktif, dengan pengecualian LinearGradient dan Image
 import 'package:rive/rive.dart' hide LinearGradient, Image;
 // Mengimpor library matematika untuk operasi rotasi
@@ -70,8 +69,7 @@ class _RiveAppHomeState extends State<RiveAppHome>
   final List<Widget> _screens = [
     const HomeTabView(),
     commonTabScene(const SearchPage()),
-    commonTabScene(const HistoryPage()),
-    commonTabScene(const NotificationPage()),
+    commonTabScene(const AddCoursePage()),
     commonTabScene(const AcountPage()),
   ];
   // Konfigurasi animasi spring untuk efek halus
